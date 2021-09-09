@@ -3,6 +3,7 @@ var y = 50;
 var speedX = 2;
 var speedY = 5;
 
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -40,7 +41,12 @@ function draw() {
     speedY = speedY * -1;
   }
 
-  if 
+  if ( x === 40) {
+    speedX = speedX * -1;
+  }
 
+  if ( x === 1240){
+    speedX = speedX * -1;
+  }
  
 }
