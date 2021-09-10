@@ -1,7 +1,9 @@
+bal = new Bal(50, 100);
+
 var x = 50;
 var y = 50;
-var speedX = 2;
-var speedY = 5;
+var speedX = [2, 4, 5, 6];
+var speedY = [5, 4, 3, 1];
 var positionX = [50,40,30,10];
 var positionY = [50,40,30,10];
 
@@ -26,33 +28,7 @@ function setup() {
 function draw() {
   background('blue');
 
-  // stel vulkleur in
-  fill(255, 255, 255);
-
-  // teken een cirkel
-  ellipse(x,y,80,80);
-
-  x = speedX + x; 
-  y = speedY + y;
-
-  if (y > 680 || y < 40) {
-    speedY = speedY * -1;
-  }
-
-  if (x > 1240 || x < 40) {
-    speedX = speedX * -1;
-  }
- 
-  for (var i = 0; i < positionX.length; i++) {
-
-    var x = positionX[i];
-    var y = positionY[i];
-    fill(100,100,255);
-    ellipse(x, y, 40,40);
-
-    x = x + speedX;
-    y = y + speedY;
-
-  }
+bal.show();
+bal.update();
 
 }
