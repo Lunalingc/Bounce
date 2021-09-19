@@ -4,9 +4,9 @@ class Bal {
     speedX;
     speedY;
   
-    constructor(newX, newY, _speedX, _speedY) {
-      this.x = newX;
-      this.y = newY;
+    constructor(_newX, _newY, _speedX, _speedY) {
+      this.x = _newX;
+      this.y = _newY;
       this.speedX = _speedX;
       this.speedY = _speedY;
     }
@@ -17,10 +17,10 @@ class Bal {
       this.x = this.x + this.speedX;
       this.y = this.y + this.speedY;
   
-      if (this.x <=0 || this.x >= 1280) {
+      if (this.x <= 25 || this.x >= 1255) {
         this.speedX = this.speedX * -1;
       }
-      if (this.y <=0 || this.y >= 720) {
+      if (this.y <= 25 || this.y >= 695) {
         this.speedY = this.speedY * -1;
       }
     }
